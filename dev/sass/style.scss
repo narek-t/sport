@@ -1,64 +1,77 @@
 @import "_normalize.scss";
 @import "_variables.scss";
 @import "_sprite.scss";
+@import "_jquery.pagepiling.scss";
 
-html {
-	font-size: 16px;
+.site-header {
+	position: fixed;
+	z-index: 10;
+}
+
+.first,
+.second,
+.third {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.first {
+	background-image: url(../img/first.jpg);
+}
+
+.second {
+	background-image: url(../img/second.jpg);
+}
+
+.third {
+	background-image: url(../img/third.jpg);
+}
+
+.menu-wrapper {
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.toggle-menu {
+	position: fixed;
+	z-index: 11;
+	right: 0;
+	top: 0;
+}
+
+.menu__inner {
+	top: 0;
+	right: 0;
 	height: 100%;
-}
-
-body {
-	background: $bgColor;
-	font-family: $fontFamily;
-	color: $mainColor;
-	min-height: 100%;
-	margin: 0;
-	display: flex;
-	flex-direction: column;
-}
-
-.all-wrapper {
-	flex: 1;
-}
-
-h1 {
-	text-align: center;
-	margin: 50px auto 30px;
-	font-size: 2.5rem;
-}
-
-a {
-	color: $linkColor;
-}
-
-.sprite-example {
-	text-align: center;
-	i {
-		display: inline-block;
-		margin: 0 10px;
+	position: fixed;
+	width: 400px;
+	background: rgba(0, 0, 0, .5);
+	transform: translateX(400px);
+	transition: all .4s ease-in-out;
+	&.visible {
+		transform: translateX(0);
 	}
-	.facebook-logo__icon {
-		@include sprite($facebook-logo-icon);
-	}
-	.google-plus-logo__icon {
-		@include sprite($google-plus-logo-icon);
-	}
-	.instagram-logo__icon {
-		@include sprite($instagram-logo-icon);
-	}
-	.twitter-logo__icon {
-		@include sprite($twitter-logo-icon);
-	}
-	.youtube-logo__icon {
-		@include sprite($youtube-logo-icon);
-	}
-}
+	.menu {
+		margin: 0;
+		padding: 200px 85px 0 40px;
+		list-style-type: none;
+		text-align: right;
+		li {
+			margin-bottom: 30px;
+		}
+		a {
+			font: 20px $fresh;
+			color: #fff;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 0.025em;
 
-.author-git {
-	text-align: center;
-}
-
-.site-footer {
-	text-align: center;
-	padding: 20px 0;
+		}
+		li.current-menu-item a,
+		a:hover{
+			color: #d47521;
+		}
+	}
 }

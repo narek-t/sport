@@ -62,7 +62,9 @@ gulp.task('styles', function() {
 		.pipe(rename({
 			suffix: '.min'
 		}))
-		.pipe(cssnano())
+		.pipe(cssnano({
+			zindex: false
+		}))
 		.pipe(sourcemaps.write('/maps'))
 		.pipe(gulp.dest('public/css/'))
 		.pipe(browserSync.stream({match: '**/*.css'}));

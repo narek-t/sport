@@ -1,4 +1,9 @@
-$mainColor: #333;
-$fontFamily: Helvetica, Arial, sans-serif;
-$linkColor: #699;
-$bgColor: #f8f8f8;
+@font-face {
+    font-family: 'freshmannormal';
+    src: url('../fonts/freshman-webfont.woff2') format('woff2'),
+         url('../fonts/freshman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+$roboto: 'Roboto', sans-serif;
+$fresh: 'freshmannormal';
