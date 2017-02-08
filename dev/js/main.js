@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$('.fullpage-helper').pagepiling({
-		verticalCentered: false,
+		verticalCentered: true,
 		anchors: ['first', 'second', 'third'],
 		navigation: {
             'position': 'right',
@@ -10,5 +10,6 @@ $(document).ready(function() {
 	$('.toggle-menu').click(function(e) {
 		e.preventDefault();
 		$('.menu__inner').toggleClass('visible');
+		$(this).toggleClass('active');
 	})
 });

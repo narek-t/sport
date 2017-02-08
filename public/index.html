@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,900"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900"/>
     <link rel="stylesheet" href="css/style.min.css"/>
     <title>Document</title>
   </head>
@@ -12,7 +12,7 @@
     <div class="loader"></div>
     <div class="all-wrapper">
       <header class="site-header"><a href="#" class="logo"><img src="img/logo.png" alt=""/></a>
-        <nav class="menu-wrapper"><a href="#" class="toggle-menu">click<span></span><span></span><span></span></a>
+        <nav class="menu-wrapper"><a href="#" class="toggle-menu cf"><span></span><span></span><span></span></a>
           <div class="menu__inner">
             <ul class="menu">
               <li><a href="#">Home</a></li>
@@ -25,13 +25,20 @@
       </header>
       <main class="main-content">
         <div class="fullpage-helper">
-          <section id="first" data-anchor="first" class="first section"></section>
+          <section id="first" data-anchor="first" class="first section">
+            <div class="container">
+              <h2 class="section-title"><span class="first-part">It's</span><span class="second-part">not</span><span class="third-part">a slam dunk</span></h2>
+              <p class="section-subtitle">Every successful athlete needs a support system</p><a href="#" class="btn btn-small">Find yours here</a>
+            </div>
+          </section>
           <section id="second" data-anchor="second" class="second section"></section>
           <section id="third" data-anchor="third" class="third section"></section>
         </div>
       </main>
     </div>
-    <footer class="site-footer"></footer>
+    <footer class="site-footer">
+      <p class="copyright">Copyright © Copyright Website College Ready Playbook  2017</p>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="js/lib/lib.min.js"></script>
     <script src="js/main.min.js"></script>

@@ -3,9 +3,16 @@
 @import "_sprite.scss";
 @import "_jquery.pagepiling.scss";
 
+// .container {
+// 	max-width: 1180px;
+// 	margin: auto;
+// }
 .site-header {
 	position: fixed;
 	z-index: 10;
+}
+.logo {
+	margin-left: 20px;
 }
 
 .first,
@@ -37,8 +44,47 @@
 .toggle-menu {
 	position: fixed;
 	z-index: 11;
-	right: 0;
-	top: 0;
+	right: 85px;
+	top: 80px;
+	width: 50px;
+	display: inline-block;
+	text-align: right;
+	min-height: 50px;
+	span {
+		display: block;
+		height: 6px;
+		margin-bottom: 6px;
+		float: right;
+		transition: all .3s ease-in-out;
+		&:first-child {
+			background: #ea7f21;
+			width: 100%;
+		}
+		&:nth-child(2) {
+			background: #3498db;
+			width: 36px;
+		}
+		&:last-child {
+			margin-bottom: 0;
+			background: #fff;
+			width: 42px;
+		}
+	}
+	&.active {
+		margin-top: 6px;
+		span:first-child {
+			transform: rotate(-45deg);
+			margin-bottom: -6px;
+		}
+		span:nth-child(2) {
+			width: 100%;
+			transform: rotate(45deg);
+			margin-bottom: 0;
+		}
+		span:last-child {
+			display: none;
+		}
+	}
 }
 
 .menu__inner {
@@ -75,3 +121,101 @@
 		}
 	}
 }
+.site-footer {
+	height: 40px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #181818;
+	z-index: 10;
+	padding: 0 60px;
+	.copyright {
+		margin: 0;
+		font: 300 13px/40px $roboto;
+		color: #4c4c4c;
+	}
+}
+
+.btn {
+	font: 900 20px/77px $roboto;
+	color: #fff;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-size: cover;
+	transition: all .3s ease-in-out;
+	&:hover {
+		opacity: .85;
+	}
+}
+
+.btn-small {
+	background: url(../img/btn-small.png) top center no-repeat;
+	min-width: 336px;
+}
+
+.section-title {
+	font-family: $fresh;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 0;
+	font-weight: normal;
+}
+
+.first {
+	.section-title {
+		padding-right: 100px;
+		margin-top: 80px;
+		font-size: 100px;
+		text-align: center;
+		word-spacing: 10px;
+		letter-spacing: 4px;
+
+	}
+	.first-part {
+		margin-right: 130px;
+		padding-left: 80px;
+	}
+	.third-part {
+		text-align: right;
+		display: block;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
